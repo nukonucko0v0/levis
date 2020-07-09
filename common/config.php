@@ -19,21 +19,21 @@ define('MAIN_TIME', 0);
 
 /********* Database ***********************************************************/
 
-define('DATABASE_TYPE', '');
-define('DATABASE_HOST', '');
-define('DATABASE_PORT', '');
-define('DATABASE_USERNAME', '');
+define('DATABASE_TYPE', 'pdo_mysql');
+define('DATABASE_HOST', 'localhost');
+define('DATABASE_PORT', '3306');
+define('DATABASE_USERNAME', 'root');
 define('DATABASE_PASSWORD', '');
-define('DATABASE_NAME', '');
+define('DATABASE_NAME', 'test');
 define('DATABASE_PREFIX', '');
 define('DATABASE_CHARSET', 'UTF8');
 define('DATABASE_CHARSET_INPUT_FROM', 'UTF-8');
 define('DATABASE_CHARSET_INPUT_TO', 'UTF-8');
 define('DATABASE_CHARSET_OUTPUT_FROM', 'UTF-8');
 define('DATABASE_CHARSET_OUTPUT_TO', 'UTF-8');
-define('DATABASE_MIGRATE_PATH', '../commonmigrate/');
-define('DATABASE_SCAFFOLD_PATH', '../commonscaffold/');
-define('DATABASE_BACKUP_PATH', '../commonbackup/');
+define('DATABASE_MIGRATE_PATH', '../common/migrate/');
+define('DATABASE_SCAFFOLD_PATH', '../common/scaffold/');
+define('DATABASE_BACKUP_PATH', '../common/backup/');
 
 /********* Session ************************************************************/
 
@@ -57,12 +57,12 @@ define('PAGE_CONTROLLER', 'page');
 
 /********* Test ***************************************************************/
 
-define('TEST_PATH', 'test/');
+define('TEST_PATH', '../common/test/');
 
 /********* Debug **************************************************************/
 
 define('DEBUG_LEVEL', 1);
-define('DEBUG_PASSWORD', '');
+define('DEBUG_PASSWORD', '1234');
 define('DEBUG_ADDR', '');
 
 /********* Logging ************************************************************/

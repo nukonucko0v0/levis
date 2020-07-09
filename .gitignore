@@ -1,2 +1,11 @@
 Thumbs.db
 .DS_Store
+
+common/logs/get/*
+!common/logs/get/.gitkeep
+common/logs/post/*
+!common/logs/post/.gitkeep
+common/logs/message/*
+!common/logs/message/.gitkeep
+common/backup/*
+!common/backup/.gitkeep
