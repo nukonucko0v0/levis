@@ -9,8 +9,8 @@
 /********* Main ***************************************************************/
 
 define('MAIN_FILE', $_SERVER['SCRIPT_NAME']);
-define('MAIN_LIBRARY_PATH', '');
-define('MAIN_APPLICATION_PATH', '');
+define('MAIN_LIBRARY_PATH', '../common/');
+define('MAIN_APPLICATION_PATH', '../');
 define('MAIN_DEFAULT_MODE', 'home');
 define('MAIN_DEFAULT_WORK', 'index');
 define('MAIN_INTERNAL_ENCODING', 'UTF-8');
@@ -31,9 +31,9 @@ define('DATABASE_CHARSET_INPUT_FROM', 'UTF-8');
 define('DATABASE_CHARSET_INPUT_TO', 'UTF-8');
 define('DATABASE_CHARSET_OUTPUT_FROM', 'UTF-8');
 define('DATABASE_CHARSET_OUTPUT_TO', 'UTF-8');
-define('DATABASE_MIGRATE_PATH', 'migrate/');
-define('DATABASE_SCAFFOLD_PATH', 'scaffold/');
-define('DATABASE_BACKUP_PATH', 'backup/');
+define('DATABASE_MIGRATE_PATH', '../commonmigrate/');
+define('DATABASE_SCAFFOLD_PATH', '../commonscaffold/');
+define('DATABASE_BACKUP_PATH', '../commonbackup/');
 
 /********* Session ************************************************************/
 
@@ -67,8 +67,8 @@ define('DEBUG_ADDR', '');
 
 /********* Logging ************************************************************/
 
-define('LOGGING_PATH', 'log/');
-define('LOGGING_MESSAGE', false);
-define('LOGGING_GET', false);
-define('LOGGING_POST', false);
+define('LOGGING_PATH', '../common/logs/');
+define('LOGGING_MESSAGE', true);
+define('LOGGING_GET', true);
+define('LOGGING_POST', true);
 define('LOGGING_FILES', false);

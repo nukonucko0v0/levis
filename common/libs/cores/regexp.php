@@ -19,7 +19,7 @@ function regexp_match($pattern, $subject)
     $regexp = false;
 
     if (REGEXP_TYPE === 'ereg') {
-        if (eregi($pattern, $subject, $matches)) {
+        if (preg_match ($pattern. '/i', $subject, $matches)) {
             $regexp = true;
         }
     } else {
