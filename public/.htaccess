@@ -9,10 +9,9 @@ Header set X-XSS-Protection "1; mode=block"
 Header set X-Frame-Options DENY
 Header set X-Content-Type-Options nosniff
 
-
 <FilesMatch "^(config\.php)">
-order allow,deny
-deny from all
+    order allow,deny
+    deny from all
 </FilesMatch>
 
 <IfModule mod_rewrite.c>
