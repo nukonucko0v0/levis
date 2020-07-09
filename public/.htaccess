@@ -1,10 +1,23 @@
-<Files ~ "^\.(htaccess|htpasswd)$">
+<Files ~ "^\.(htaccess|htpasswd|log|ini)$">
     deny from all
 </Files>
 
 Options -Indexes
+DirectoryIndex index.php
+
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Frame-Options DENY
+Header set X-Content-Type-Options nosniff
+
 
 <FilesMatch "^(config\.php)">
 order allow,deny
 deny from all
 </FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule (.*) index.php/$1
+</IfModule>
