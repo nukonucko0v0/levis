@@ -9,3 +9,4 @@ common/logs/message/*
 !common/logs/message/.gitkeep
 common/backup/*
 !common/backup/.gitkeep
+common/config.php
