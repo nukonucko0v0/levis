@@ -8,8 +8,8 @@ if (defined('PRODUCTION') && !ssl(true) && MAIN_PATH === '') {
 require_once __DIR__ . '/../common/libs/vendor/autoload.php';
 
 // EFTEC/BladeOne import
-use eftec\bladeone\BladeOne;
-$views = __DIR__ . '/views/home';
-$cache = __DIR__ . '/cache';
-$_blade = new BladeOne($views,$cache,BladeOne::MODE_DEBUG);
-echo $_blade->run("index",array("variable1"=>"value1"));
+// use eftec\bladeone\BladeOne;
+// $views = __DIR__ . '/views';
+// $cache = __DIR__ . '/cache';
+// $_blade = new BladeOne($views,$cache,BladeOne::MODE_DEBUG);
+// echo $_blade->run("home.index",array("variable1"=>"value1"));

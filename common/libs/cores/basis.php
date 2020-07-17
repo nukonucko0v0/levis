@@ -1,4 +1,7 @@
 <?php
+// Composer autoload.php
+require_once __DIR__ . '/../vendor/autoload.php';
+use eftec\bladeone\BladeOne;
 
 /*******************************************************************************
 
@@ -440,14 +443,25 @@ function view($target = null, $return = false)
         $routing = $GLOBALS['_routing'] . '/';
     }
 
-    $dir  = 'app/views/' . $routing . $_REQUEST['_mode'] . '/';
     if (MAIN_DEFAULT_TEMPLATE_ENGINE_BLADE) {
-        $file = $_REQUEST['_work'] . '.blade.php';
+        $dir        = 'app/views/' . $routing . $_REQUEST['_mode'] . '/';
+        $file       = $_REQUEST['_work'] . '.blade.php';
+        $blade_file  = $_REQUEST['_mode'] . '.' . $_REQUEST['_work'];
     } else {
+        $dir  = 'app/views/' . $routing . $_REQUEST['_mode'] . '/';
         $file = $_REQUEST['_work'] . '.php';
     }
     if ($return) {
         ob_start();
+    }
+
+    if (is_file(MAIN_PATH . MAIN_APPLICATION_PATH . $dir . $file)) {
+        $views = __DIR__ . '/../../../app/views';
+        $cache = __DIR__ . '/../../../app/cache';
+        var_dump($file);
+        var_dump($blade_file);
+        $_blade = new BladeOne($views,$cache,BladeOne::MODE_DEBUG);
+        echo $_blade->run($blade_file , array('variable1'=>"value1"));
     }
 
     if ($target) {
