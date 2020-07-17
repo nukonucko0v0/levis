@@ -1,3 +1,3 @@
 <?php
 
-import('app/config/index.php');
+import('app/configs/index.php');

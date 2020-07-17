@@ -17,6 +17,9 @@ define('MAIN_INTERNAL_ENCODING', 'UTF-8');
 define('MAIN_CHARSET', 'utf-8');
 define('MAIN_TIME', 0);
 
+/********* Template Engine ***************************************************************/
+define('MAIN_DEFAULT_TEMPLATE_ENGINE_BLADE', true);
+
 /********* Database ***********************************************************/
 
 define('DATABASE_TYPE', 'pdo_mysql');

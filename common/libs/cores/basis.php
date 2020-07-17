@@ -441,8 +441,11 @@ function view($target = null, $return = false)
     }
 
     $dir  = 'app/views/' . $routing . $_REQUEST['_mode'] . '/';
-    $file = $_REQUEST['_work'] . '.php';
-
+    if (MAIN_DEFAULT_TEMPLATE_ENGINE_BLADE) {
+        $file = $_REQUEST['_work'] . '.blade.php';
+    } else {
+        $file = $_REQUEST['_work'] . '.php';
+    }
     if ($return) {
         ob_start();
     }

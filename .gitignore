@@ -10,3 +10,7 @@ common/logs/message/*
 common/backup/*
 !common/backup/.gitkeep
 common/config.php
+
+composer.lock
+app/cache/*
+!app/cache/.gitkeep

@@ -35,8 +35,17 @@
 
 制限は無いので、フレームワークとまったく関係のないディレクトリに置いても何も問題はありません。
 
-libs/vendors/ 内のファイルを呼び出す場合、require_once() や import() で読み込む必要があります。
+libs/vendor/ 内のファイルを呼び出す場合、require_once() や import() で読み込む必要があります。
 
 ***自動で読み込まれたりはしません。***
 
 外部のライブラリを使用する場合、プラグインやサービスとしてラッパー関数を作ると使い方を統一することができます。これも制限は無いので、ライブラリを直接呼び出しても何も問題はありません。
+
+## 外部ライブラリ
+
+### BladeOne
+Laravelのテンプレート・エンジン「Blade」のスタンドアローン版を利用できます。
+
+[EFTEC/BladeOne](https://github.com/EFTEC/BladeOne)
+
+__MAIN_DEFAULT_TEMPLATE_ENGINE_BLADE__ を __TRUE__ に設定することでBLADEが利用できます。
